@@ -25,6 +25,10 @@ weighted_graph *create_weighted_graph();
 void delete_unweighted_graph(unweighted_graph *g);
 void delete_weighted_graph(weighted_graph *g);
 
+// operations
+void add_edge(unweighted_graph *g);
+void add_edge(weighted_graph *g, int weight);
+
 // algorithms
 void dfs(int start_node, void(*callback)(int current_node)); // recursive implementation
 void bfs(int start_node, void(*callback)(int current_node)); // need to implement queue for this one
