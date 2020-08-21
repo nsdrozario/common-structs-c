@@ -13,7 +13,7 @@ This is a library that has implementations for common data structures, intended 
 - [ ] `stack`
 - [ ] `priority_queue`
 - [ ] `deque`
-- [ ] `linked_list`
+- [x] `linked_list` (incomplete)
 
 ## Usage in C++
 You can use this library in C++, but you probably should just use the C++ STL instead. It'll likely have more efficient implementations than
