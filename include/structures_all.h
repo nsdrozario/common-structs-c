@@ -6,6 +6,9 @@ extern "C" {
 #endif
 
 #include <vector.h>
+#include <linked_list.h>
+#include <graph.h>
+
 
 #ifdef __cplusplus
 }
