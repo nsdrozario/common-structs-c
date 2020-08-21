@@ -4,16 +4,16 @@ This is a library that has implementations for common data structures, intended 
 
 ## Currently supported structures
 - [x] `vector` (incomplete)
-- [] `set`
-- [] `map`
-- [] `graph`
-- [] `tree`
-- [] `union_find`
-- [] `queue`
-- [] `stack`
-- [] `priority_queue`
-- [] `deque`
-- [] `linked_list`
+- [ ] `set`
+- [ ] `map`
+- [ ] `graph`
+- [ ] `tree`
+- [ ] `union_find`
+- [ ] `queue`
+- [ ] `stack`
+- [ ] `priority_queue`
+- [ ] `deque`
+- [ ] `linked_list`
 
 ## Usage in C++
 You can use this library in C++, but you probably should just use the C++ STL instead. It'll likely have more efficient implementations than
