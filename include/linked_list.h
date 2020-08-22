@@ -7,15 +7,18 @@ extern "C" {
 
 #include <stdlib.h>
 
+struct ll_node {
+
+struct ll_node* next;
+void *val;
+
+};
+
+typedef struct ll_node ll_node;
+
 typedef struct {
 
-ll_node *next = NULL;
-
-} ll_node;
-
-typedef struct {
-
-ll_node *start = NULL;
+ll_node *start;
 size_t size;
 
 } linked_list;
