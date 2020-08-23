@@ -12,7 +12,7 @@ queue *create_queue() {
 queue *create_queue(size_t s) {
 
     queue *q = malloc(sizeof(queue));
-    q->contents = malloc(sizeof(void *) * s);
+    q->contents = malloc(sizeof(int) * s);
     q->allocated_size = s;
     q->real_size = 0;
 
