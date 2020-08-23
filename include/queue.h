@@ -9,7 +9,7 @@ extern "C" {
 
 typedef struct {
 
-    void **contents;
+    int *contents;
     size_t allocated_size = 0;
     size_t real_size = 0;
     int front_index = 0;
