@@ -20,7 +20,8 @@ vector *vector_create(size_t s);
 void vector_resize(vector *v, size_t s);
 void vector_push_back(vector *v, int element);
 void vector_delete(vector *v);
-
+int vector_get(vector *v, int index);
+void vector_set(vector *v, int index, int val);
 
 #ifdef __cplusplus
 }
