@@ -3,7 +3,7 @@
 This is a library that has implementations for common data structures, intended for use in the C language.
 
 ## Currently supported structures
-- [x] `vector` (incomplete)
+- [x] `vector`
 - [ ] `set`
 - [ ] `map`
 - [ ] `graph`
