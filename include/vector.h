@@ -5,17 +5,20 @@
 extern "C" {
 #endif
 
+#include <stdlib.h>
+#include <stddef.h>
+
 typedef struct {
 
-    void ** contents;
+    int* contents;
     size_t size;
+    size_t allocated_size;
 
 } vector;
 
 vector *vector_create(size_t s);
-vector *vector_create();
 void vector_resize(vector *v, size_t s);
-void vector_push_back(vector *v, void *element);
+void vector_push_back(vector *v, int element);
 void vector_delete(vector *v);
 
 

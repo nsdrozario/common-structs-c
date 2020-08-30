@@ -7,27 +7,20 @@ extern "C" {
 
 #include <stdlib.h>
 
-struct ll_node {
+struct linked_list {
 
-struct ll_node* next;
-void *val;
+    struct linked_list *next;
+    int value;
 
 };
 
-typedef struct ll_node ll_node;
+typedef struct linked_list linked_list;
 
-typedef struct {
-
-ll_node *start;
-size_t size;
-
-} linked_list;
-
-void linked_list_add_to_end(linked_list* l, ll_node *n);
-
-void linked_list_remove_node(linked_list *l, int n);
-
-void linked_list_remove_recursive(linked_list *l, int n);
+void linked_list_union(linked_list *a, linked_list *b);
+void linked_list_delete_node(linked_list *a, int index);
+void linked_list_insert(linked_list *a, int index, int val);
+void linked_list_set_next(linked_list *a, int index, linked_list *b);
+void linked_list_push_back(linked_list *l, int x);
 
 #ifdef __cplusplus
 }

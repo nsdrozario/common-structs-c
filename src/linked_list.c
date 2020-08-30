@@ -1,36 +1,63 @@
 #include <linked_list.h>
 
-void linked_list_add_to_end(linked_list* l, ll_node *n) {
+void linked_list_union(linked_list *a, linked_list *b) {
 
-  ll_node *current_node = l->start;
-  size_t size = 0;
-  while(current_node->next != NULL) {
-    size++;
-    current_node = current_node->next;
+  linked_list *node = a;
+  while (a.next != NULL) {
+    node = node.next;
   }
-  current_node->next = n;
-  size++;
+  a.next = b;
 
 }
 
-// add null pointer guards to these functions later
-void linked_list_remove_node(linked_list *l, int n) { // joins parent of nth element with child of nth element while removing nth element from the linked list
-  
-  ll_node *parent_node = l->start;
-  for (int i = 0; i < n-1; i++) {
-    parent_node = parent_node->next;
+void linked_list_delete_node(linked_list *a, int index) {
+
+  int i = index-1;
+  linked_list *node = a;
+  linked_list *b;
+
+  while (i--) {
+    node = node.next;
   }
-  parent_node->next = parent_node->next->next;
-  
+
+  b = node.next.next;
+  node.next = b;
+
 }
 
-void linked_list_remove_recursive(linked_list *l, int n) { // this function isn't actually recursive it just deletes every node from the given index
+void linked_list_insert(linked_list *a, int index, int val) {
 
-  ll_node *current_node = l->start;
-  for (int i = 0; i < n; i++) {
-    current_node = current_node->next;
+  int i = index-1;
+  linked_list *node = a;
+  linked_list *b;
+  b.value = val;
+
+  while (i--) {
+    node = node.next;
   }
-  
-  current_node->next = NULL;
-  
+
+  b.next = node.next.next;
+  node.next = b;
+
+}
+
+void linked_list_set_next(linked_list *a, int index, linked_list *b) {
+
+  int i = index;
+  linked_list *node = a;
+
+  while (i--) {
+    node = node.next;
+  }
+
+  node.next = b;
+
+}
+
+void linked_list_push_back(linked_list *a, int x) {
+
+  linked_list *b;
+  b.value = x;
+  linked_list_union(a, b);
+
 }
