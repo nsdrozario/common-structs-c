@@ -1,63 +1,33 @@
 #include <linked_list.h>
 
+linked_list *linked_list_create()
+{
+    linked_list *l = malloc(sizeof(linked_list));
+    return l;
+}
+
+void linked_list_delete(linked_list *l)
+{
+    linked_list *current_node = l;
+    linked_list *previous_node;
+    while (l != NULL) {
+        previous_node = current_node;
+        current_node = current_node->next;
+        free(previous_node);
+    }
+}
+
 void linked_list_union(linked_list *a, linked_list *b) {
 
-  linked_list *node = a;
-  while (a.next != NULL) {
-    node = node.next;
-  }
-  a.next = b;
-
+    linked_list *current_node = a;
+    while (current_node->next != NULL) {
+        current_node = current_node->next;
+    }
+    current_node->next = b;
 }
 
-void linked_list_delete_node(linked_list *a, int index) {
-
-  int i = index-1;
-  linked_list *node = a;
-  linked_list *b;
-
-  while (i--) {
-    node = node.next;
-  }
-
-  b = node.next.next;
-  node.next = b;
-
-}
-
-void linked_list_insert(linked_list *a, int index, int val) {
-
-  int i = index-1;
-  linked_list *node = a;
-  linked_list *b;
-  b.value = val;
-
-  while (i--) {
-    node = node.next;
-  }
-
-  b.next = node.next.next;
-  node.next = b;
-
-}
-
-void linked_list_set_next(linked_list *a, int index, linked_list *b) {
-
-  int i = index;
-  linked_list *node = a;
-
-  while (i--) {
-    node = node.next;
-  }
-
-  node.next = b;
-
-}
-
-void linked_list_push_back(linked_list *a, int x) {
-
-  linked_list *b;
-  b.value = x;
-  linked_list_union(a, b);
-
+void linked_list_push_back(linked_list *l, int x) {
+    linked_list *new_node = linked_list_create();
+    new_node->value = x;
+    linked_list_union(l, new_node);
 }

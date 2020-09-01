@@ -16,11 +16,10 @@ struct linked_list {
 
 typedef struct linked_list linked_list;
 
+linked_list *linked_list_create();
 void linked_list_union(linked_list *a, linked_list *b);
-void linked_list_delete_node(linked_list *a, int index);
-void linked_list_insert(linked_list *a, int index, int val);
-void linked_list_set_next(linked_list *a, int index, linked_list *b);
 void linked_list_push_back(linked_list *l, int x);
+void linked_list_delete(linked_list *l);
 
 #ifdef __cplusplus
 }
