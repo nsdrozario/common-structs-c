@@ -32,11 +32,13 @@ This is a library that has implementations for common data structures, intended 
 - [ ] `priority_queue`
 - [ ] `deque`
 - [ ] `linked_list` (incomplete)
-    - [ ] `linked_list_union()`
+    - [x] `linked_list_create()` (constructor)
+    - [x] `linked_list_delete()` (destructor)
+    - [x] `linked_list_union()` (merges two linked lists together)
     - [ ] `linked_list_delete_node()` (deletes single node and joins nodes in between)
     - [ ] `linked_list_insert()` (creates node at index in between the adjacent indices)
     - [ ] `linked_list_set_next()` (sets the next pointer of the node at the index value)
-    - [ ] `linked_list_push_back` (adds a node at the end of the list)
+    - [x] `linked_list_push_back` (adds a node at the end of the list)
 
 ## Usage in C++
 You can use this library in C++, but you probably should just use the C++ STL instead. It'll likely have more efficient implementations than
