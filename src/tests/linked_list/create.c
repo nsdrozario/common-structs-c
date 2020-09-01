@@ -6,11 +6,11 @@ int main () {
     linked_list *l = linked_list_create();
     linked_list *l0 = l;
     l->value = 0;
-    for (int i = 0; i < 10; i++) {
+    for (int i = 1; i < 10; i++) {
         linked_list_push_back(l, i);
     }
 
-    while(l->next != NULL) {
+    while(l != NULL) {
         printf("%d ", l->value);
         l = l->next;
     }

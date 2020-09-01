@@ -3,14 +3,16 @@
 linked_list *linked_list_create()
 {
     linked_list *l = malloc(sizeof(linked_list));
+    l->next = NULL;
+    l->value = 0;
     return l;
 }
 
 void linked_list_delete(linked_list *l)
 {
     linked_list *current_node = l;
-    linked_list *previous_node;
-    while (l != NULL) {
+    linked_list *previous_node = l;
+    while (current_node != NULL) {
         previous_node = current_node;
         current_node = current_node->next;
         free(previous_node);
