@@ -3,7 +3,8 @@
 fast_stack *fast_stack_create() {
 
     fast_stack *s = malloc(sizeof(fast_stack));
-    s->stack = linked_list_create();
+    s->stack = NULL;
+    s->size = 0;
     return s;
 
 }
@@ -14,6 +15,7 @@ void fast_stack_push(fast_stack *f, int element) {
     l->value = element;
     l->next = f->stack;
     f->stack = l;
+    f->size += 1;
 
 }
 
@@ -26,6 +28,7 @@ void fast_stack_pop(fast_stack *f) {
     f->stack = f->stack->next; // again i don't think this actually conserves any space at all
     node->next=NULL;
     linked_list_delete(node);
+    f->size -= 1;
 }
 
 void fast_stack_delete(fast_stack *f) {
