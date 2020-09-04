@@ -10,9 +10,9 @@ extern "C" {
 typedef struct {
 
     int *contents;
-    size_t allocated_size = 0;
-    size_t real_size = 0;
-    int front_index = 0;
+    size_t allocated_size;
+    size_t real_size;
+    int front_index;
 
 } queue;
 

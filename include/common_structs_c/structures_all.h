@@ -5,9 +5,9 @@
 extern "C" {
 #endif
 
-#include <vector.h>
-#include <linked_list.h>
-#include <graph.h>
+#include <common_structs_c/vector.h>
+#include <common_structs_c/linked_list.h>
+#include <common_structs_c/graph.h>
 
 
 #ifdef __cplusplus
