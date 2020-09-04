@@ -1,4 +1,4 @@
-#include <queue.h>
+#include <common_structs_c/queue.h>
 
 queue *create_queue() {
 

@@ -1,4 +1,4 @@
-#include <vector.h>
+#include <common_structs_c/vector.h>
 #include <stdio.h>
 
 int main () {

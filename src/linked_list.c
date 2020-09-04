@@ -1,4 +1,4 @@
-#include <linked_list.h>
+#include <common_structs_c/linked_list.h>
 
 linked_list *linked_list_create()
 {

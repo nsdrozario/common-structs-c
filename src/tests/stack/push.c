@@ -1,4 +1,4 @@
-#include <stack.h>
+#include <common_structs_c/stack.h>
 #include <stdio.h>
 
 void dfs(linked_list *l) {

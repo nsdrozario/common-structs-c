@@ -1,4 +1,4 @@
-#include <stack.h>
+#include <common_structs_c/stack.h>
 
 fast_stack *fast_stack_create() {
 

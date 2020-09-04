@@ -1,4 +1,4 @@
-#include <stack.h>
+#include <common_structs_c/stack.h>
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -12,12 +12,12 @@ V
 
 */
 
-int adjlist[4][2] = {
+int adjlist[][2] = {
 
     {1, 4},
     {2, -1},
     {3, -1},
-    {-1, -1}
+//    {-1, -1}
 
 };
 
