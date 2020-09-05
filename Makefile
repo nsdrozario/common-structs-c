@@ -10,6 +10,9 @@ endif
 
 LDFLAGS = -L. -shared
 
+INSTALL_DIR_LIB=/usr/lib/
+INSTALL_DIR_HEADERS=/usr/include/
+
 %.o: src/%.c
 	$(CC) $< -o $@ $(CFLAGS)
 
@@ -24,5 +27,6 @@ linked_list: linked_list.o
 stack: linked_list stack.o 
 	$(CC) stack.o -o $(PREFIX)stack.$(LIB_SUFFIX) $(LDFLAGS) -l$(PREFIX)linked_list
 
-
-
+install: vector linked_list stack
+	cp *.dll $(INSTALL_DIR_LIB)
+	cp include $(INSTALL_DIR_HEADERS) -r
