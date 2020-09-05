@@ -1,11 +1,12 @@
 CC = gcc
-CFLAGS = -Wall -Werror -fpic -Iinclude/common_structs_c/
+CFLAGS = -c -Wall -Werror -fpic -Iinclude/
 PREFIX = common_structs_ # please don't change this
 
 ifeq ($(OS), Windows_NT)
 	LIB_SUFFIX = dll
 else
 	LIB_SUFFIX = so
+endif
 
 LDFLAGS = -L. -shared
 
