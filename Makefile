@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -c -Wall -Werror -fpic -Iinclude/
-PREFIX = common_structs_ # please don't change this
+PREFIX = common_structs_
 
 ifeq ($(OS), Windows_NT)
 	LIB_SUFFIX = dll
