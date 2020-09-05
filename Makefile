@@ -22,7 +22,7 @@ linked_list: linked_list.o
 	$(CC) linked_list.o -o $(PREFIX)linked_list.$(LIB_SUFFIX) $(LDFLAGS)
 
 stack: linked_list stack.o 
-	$(CC) stack.o -o $(PREFIX)stack.(LIB_SUFFIX) $(LDFLAGS) -l$(PREFIX)linked_list
+	$(CC) stack.o -o $(PREFIX)stack.$(LIB_SUFFIX) $(LDFLAGS) -l$(PREFIX)linked_list
 
 
 
