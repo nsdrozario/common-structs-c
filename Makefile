@@ -10,7 +10,7 @@ endif
 
 LDFLAGS = -L. -shared
 
-INSTALL_DIR_LIB=/usr/lib/
+INSTALL_DIR_LIB=/mingw64/bin/
 INSTALL_DIR_HEADERS=/usr/include/
 
 %.o: src/%.c
