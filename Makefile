@@ -10,7 +10,7 @@ endif
 
 LDFLAGS = -L. -shared
 
-INSTALL_DIR_LIB=/mingw64/bin/
+INSTALL_DIR_LIB=/usr/lib/
 INSTALL_DIR_HEADERS=/usr/include/
 
 %.o: src/%.c
@@ -26,6 +26,16 @@ linked_list: linked_list.o
 
 stack: linked_list stack.o 
 	$(CC) stack.o -o $(PREFIX)stack.$(LIB_SUFFIX) $(LDFLAGS) -l$(PREFIX)linked_list
+
+test: vector linked_list stack
+	
+
+.PHONY: clean
+clean:
+	rm -rf *.exe 
+	rm -rf *.o
+	rm -rf *.dll
+	rm -rf *.so
 
 install: vector linked_list stack
 	cp *.dll $(INSTALL_DIR_LIB)
