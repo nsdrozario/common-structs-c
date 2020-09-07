@@ -21,14 +21,16 @@ This is a library that has implementations for common data structures, intended 
 - [ ] `union_find`
     - [ ] Union
     - [ ] Find
-- [ ] `queue`
-    - [ ] Front
-    - [ ] Pop
-    - [ ] Push
-- [ ] `stack`
-    - [ ] Top
-    - [ ] Pop
-    - [ ] Push
+- [x] `queue`
+    - [x] Front
+    - [x] Pop
+    - [x] Push
+    - [x] Constructor
+    - [x] Destructor
+- [x] `stack`
+    - [x] Top
+    - [x] Pop
+    - [x] Push
 - [ ] `priority_queue`
 - [ ] `deque`
 - [ ] `linked_list` (incomplete)
