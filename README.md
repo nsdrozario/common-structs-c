@@ -31,6 +31,8 @@ This is a library that has implementations for common data structures, intended 
     - [x] Top
     - [x] Pop
     - [x] Push
+    - [x] Constructor
+    - [x] Destructor
 - [ ] `priority_queue`
 - [ ] `deque`
 - [ ] `linked_list` (incomplete)
