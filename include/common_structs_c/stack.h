@@ -13,9 +13,13 @@ typedef struct {
 
 } fast_stack;
 
+// Constructor
 fast_stack *fast_stack_create();
+
+// Destructor
 void fast_stack_delete(fast_stack *f);
 
+// Operations
 void fast_stack_push(fast_stack *f, int element);
 int fast_stack_front(fast_stack *f);
 void fast_stack_pop(fast_stack *f);

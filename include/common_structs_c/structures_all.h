@@ -8,7 +8,8 @@ extern "C" {
 #include <common_structs_c/vector.h>
 #include <common_structs_c/linked_list.h>
 #include <common_structs_c/graph.h>
-
+#include <common_structs_c/stack.h>
+#include <common_structs_c/queue.h>
 
 #ifdef __cplusplus
 }

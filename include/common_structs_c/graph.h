@@ -1,35 +1,64 @@
+#ifndef COMMON_STRUCTS_GRAPH_H
+#define COMMON_STRUCTS_GRAPH_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct {
 
-int **adj_list;
-int vertices;
-
-} unweighted_graph;
-
-typedef struct {
-
-int **adj_matrix; // -1 if no edge exists
-
-} weighted_graph;
+    int **adjlist;
+    int nodes;
+    int edges;
+    int connected_components;
+    
+} adjlist_unweighted_graph;
 
 typedef struct {
+    bool **adjmatrix;
+    int nodes;
+    int edges;
+    int connected_components;
+} adjmatrix_unweighted_graph;
 
-} array_2d; // implicit graph
+typedef struct {
+    int **adjlist;
+    int **weights;
+    int nodes;
+    int edges;
+    int connected_components;
+} adjlist_weighted_graph;
 
-// constructors
-unweighted_graph *create_unweighted_graph();
-weighted_graph *create_weighted_graph();
+typedef struct {
+    bool **adjmatrix;
+    int **weights;
+    int nodes;
+    int edges;
+    int connected_components;
+} adjmatrix_weighted_graph;
 
-// destructors
-void delete_unweighted_graph(unweighted_graph *g);
-void delete_weighted_graph(weighted_graph *g);
+// Shortened struct names
+#define lgraph adjlist_unweighted_graph 
+#define mgraph adjmatrix_unweighted_graph 
+#define lgraph_w adjlist_weighted_graph 
+#define mgraph_w adjmatrix_weighted_graph 
 
-// operations
-void add_edge(unweighted_graph *g);
-void add_edge(weighted_graph *g, int weight);
+// Constructors
+lgraph *create_lgraph(int nodes);
+mgraph *create_mgraph(int nodes);
+lgraph_w *create_lgraph_w(int nodes);
+mgraph_w *create_mgraph_w(int nodes);
 
-// algorithms
-void dfs(int start_node, void(*callback)(int current_node)); // recursive implementation
-void bfs(int start_node, void(*callback)(int current_node)); // need to implement queue for this one
-void floodfill(int x, int y, void(*callback)(int current_node));
+// Destructors
+void delete_lgraph(lgraph *g);
+void delete_mgraph(mgraph *g);
+void delete_lgraph_w(lgraph_w *g);
+void delete_mgraph_w(mgraph_w *g);
+
+#ifdef __cplusplus
+}
+#endif
+#endif

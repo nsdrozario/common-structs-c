@@ -17,11 +17,13 @@ typedef struct {
 
 } queue;
 
-
+// Constructor
 queue *create_queue();
 
+// Destructor
 void delete_queue(queue *q);
 
+// Operations
 int queue_front(queue *q);
 void queue_pop(queue *q);
 void queue_push(queue *q, int element);
