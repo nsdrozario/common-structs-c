@@ -6,6 +6,7 @@ extern "C" {
 #endif
 
 #include <stdlib.h>
+#include <limits.h>
 
 typedef struct {
 
@@ -18,8 +19,6 @@ typedef struct {
 
 
 queue *create_queue();
-queue *create_queue(size_t s);
-
 
 void delete_queue(queue *q);
 

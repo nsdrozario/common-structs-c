@@ -16,7 +16,7 @@ INSTALL_DIR_HEADERS=/usr/include/
 %.o: src/%.c
 	$(CC) $< -o $@ $(CFLAGS)
 
-all: vector linked_list stack
+all: vector linked_list stack queue
 
 vector: vector.o
 	$(CC) vector.o -o $(PREFIX)vector.$(LIB_SUFFIX) $(LDFLAGS)
@@ -26,6 +26,9 @@ linked_list: linked_list.o
 
 stack: linked_list stack.o 
 	$(CC) stack.o -o $(PREFIX)stack.$(LIB_SUFFIX) $(LDFLAGS) -l$(PREFIX)linked_list
+
+queue: queue.o 
+	$(CC) queue.o -o $(PREFIX)queue.$(LIB_SUFFIX) $(LDFLAGS)
 
 test: vector linked_list stack
 	

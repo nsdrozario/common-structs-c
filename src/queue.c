@@ -7,19 +7,15 @@ queue *create_queue() {
     q->allocated_size = 0;
     q->real_size = 0;
 
-}
-
-queue *create_queue(size_t s) {
-
-    queue *q = malloc(sizeof(queue));
-    q->contents = malloc(sizeof(int) * s);
-    q->allocated_size = s;
-    q->real_size = 0;
+    return q;
 
 }
 
 int queue_front(queue *q) {
 
+    if (q->real_size == 0 || q->allocated_size == 0) {
+        return INT_MIN;
+    }
     return q->contents[q->front_index];
 
 }
@@ -32,7 +28,7 @@ void queue_pop(queue *q) {
 
 void queue_push(queue *q, int element) {
 
-    if (q->real_size = q->allocated_size) {
+    if (q->real_size == q->allocated_size) {
         q->contents = realloc(q->contents, ++q->allocated_size);
     }
 
