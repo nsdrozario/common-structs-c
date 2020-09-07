@@ -23,10 +23,9 @@ queue *create_queue(size_t s);
 
 void delete_queue(queue *q);
 
-
-void *queue_front(queue *q);
+int queue_front(queue *q);
 void queue_pop(queue *q);
-void queue_push(void *element);
+void queue_push(queue *q, int element);
 
 #ifdef __cplusplus
 }

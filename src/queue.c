@@ -18,7 +18,7 @@ queue *create_queue(size_t s) {
 
 }
 
-void *queue_front(queue *q) {
+int queue_front(queue *q) {
 
     return q->contents[q->front_index];
 
@@ -30,8 +30,20 @@ void queue_pop(queue *q) {
 
 }
 
+void queue_push(queue *q, int element) {
+
+    if (q->real_size = q->allocated_size) {
+        q->contents = realloc(q->contents, ++q->allocated_size);
+    }
+
+    q->contents[q->real_size] = element;
+    q->real_size++;
+
+}
+
 void delete_queue(queue *q) {
 
     free(q->contents);
+    free(q);
 
 }
