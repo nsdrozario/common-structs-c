@@ -30,8 +30,12 @@ stack: linked_list stack.o
 queue: queue.o 
 	$(CC) queue.o -o $(PREFIX)queue.$(LIB_SUFFIX) $(LDFLAGS)
 
-test: vector linked_list stack
-	
+graph: graph.o
+	$(CC) graph.o -o $(PREFIX)graph.$(LIB_SUFFIX) $(LDFLAGS)
+
+.PHONY: test
+test: vector linked_list stack graph
+	$(MAKE) -C $^
 
 .PHONY: clean
 clean:

@@ -23,6 +23,7 @@ int queue_front(queue *q) {
 void queue_pop(queue *q) {
 
     q->front_index++;
+    q->real_size--;
 
 }
 
