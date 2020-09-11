@@ -56,7 +56,7 @@ int vector_get(vector *v, int index, uint8_t *error) {
     if (index >= v->size) {
         
         *error = VECTOR_INDEX_ERROR;
-        return NULL;
+        return INT_MIN;
 
     }
 
