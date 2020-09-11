@@ -7,6 +7,7 @@ extern "C" {
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 typedef struct {
 
@@ -51,6 +52,9 @@ lgraph *create_lgraph(int nodes);
 mgraph *create_mgraph(int nodes);
 lgraph_w *create_lgraph_w(int nodes);
 mgraph_w *create_mgraph_w(int nodes);
+
+// lgraph operations
+void lgraph_add_edge(lgraph* g, int node, int adj, bool bidirectional, uint8_t *error);
 
 // Destructors
 void delete_lgraph(lgraph *g);
