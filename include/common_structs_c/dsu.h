@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef struct {
 
@@ -15,5 +16,7 @@ void disjoint_set_delete();
 
 // operations
 
-void disjoint_set_union(int a, int b);
-void disjoint_set_find(int node);
+void disjoint_set_union(int a, int b, uint8_t *error);
+void disjoint_set_find(int node, uint8_t *error);
+
+void disjoint_set_count_connected_components(int node, uint8_t *error);
