@@ -19,4 +19,4 @@ void disjoint_set_delete();
 void disjoint_set_union(int a, int b, uint8_t *error);
 void disjoint_set_find(int node, uint8_t *error);
 
-void disjoint_set_count_connected_components(int node, uint8_t *error);
+void disjoint_set_count_in_connected_component(int node, uint8_t *error); // return amount of vertices in connected component
