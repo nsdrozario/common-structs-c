@@ -5,7 +5,8 @@ extern "C" {
 #endif 
 
 #include <common_structs_c/linked_list.h>
-
+#include <stdint.h>
+    
 typedef struct {
 
     linked_list *stack;
@@ -13,12 +14,21 @@ typedef struct {
 
 } fast_stack;
 
-// Constructor
+typedef struct {
+    
+    size_t size;
+    int *contents;
+    
+} array_stack; 
+    
+// Constructors
 fast_stack *fast_stack_create();
-
-// Destructor
+array_stack *array_stack_create(uint8_t *error);
+    
+// Destructors
 void fast_stack_delete(fast_stack *f);
-
+void array_stack_delete();
+    
 // Operations
 void fast_stack_push(fast_stack *f, int element);
 int fast_stack_front(fast_stack *f);
