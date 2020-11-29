@@ -38,8 +38,8 @@ void vector_push_back(vector *v, int element, uint8_t *error) {
 
     if (v->allocated_size == v->size) { 
         uint8_t e = 0;
-        vector_resize(v, ((v->allocated_size)+1), &e);
-        if (e == -1) {
+        vector_resize(v, ((v->allocated_size)*2), &e);
+        if (e == VECTOR_ALLOC_ERROR) {
             *error = VECTOR_ALLOC_ERROR;
             return;
         }
