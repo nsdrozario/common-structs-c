@@ -43,6 +43,9 @@ This is a library that has implementations for common data structures, intended 
     - [ ] `linked_list_insert()` (creates node at index in between the adjacent indices)
     - [ ] `linked_list_set_next()` (sets the next pointer of the node at the index value)
     - [x] `linked_list_push_back` (adds a node at the end of the list)
+- [x] `binary_tree` (not tested yet)
+    - [x] `binary_tree_create()` (constructor)
+    - [x] `binary_tree_delete()` (destructor)
 
 ## Usage in C++
 You can use this library in C++, but you probably should just use the C++ STL instead. It'll likely have more efficient implementations than
